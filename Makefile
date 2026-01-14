@@ -1,15 +1,15 @@
 # compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++11 -O2 -Wall -Werror
+CXXFLAGS = -std=c++14 -O2 -Wall -Werror
 
 # source files
-SRCS = alsa-player.cpp
+SRCS = ALSAPlayer.cpp
 
 # object files
 OBJS = $(SRCS:.cpp=.o)
 
 # executable file
-TARGET = alsa-player
+TARGET = audio-player
 
 # default rule
 all: $(TARGET)
