@@ -18,8 +18,10 @@ default ALSA device with basic metadata display.
   - Album
 - Simple, readable C++ design suitable for learning ALSA basics
 
-## Building
-You will need the following libraries installed:
+## Building (Linux)
+To build on Linux, You will need the following
+libraries/tools installed:
+- **CMake**
 - **ALSA**
 - **libsndfile**
 
@@ -55,5 +57,37 @@ sudo xbps-install -S alsa-lib-devel libsndfile-devel
 
 To build the audio player, simply run
 ```bash
+cmake -B build
+cd build
+make
+```
+
+## Building (macOS)
+To build on macOS, you will first need to install
+the Xcode Command Line Tools. To do this, run
+the following command:
+```bash
+xcode-select --install
+```
+
+You will then need to install Homebrew, which
+will be used to install the dependencies. To
+install Homebrew, follow the instructions
+[here.](https://brew.sh/)
+
+Next you will need the following libraries/tools
+installed:
+- **CMake**
+- **libsndfile**
+
+Run the following to install the libraries/tools:
+```bash
+brew install cmake libsndfile
+```
+
+To build the audio player, simply run
+```bash
+cmake -B build
+cd build
 make
 ```
