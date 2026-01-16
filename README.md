@@ -1,12 +1,16 @@
-# ALSA Audio Player
-This is a minimal command-line audio player for Linux written in C++
-using **ALSA** and **libsndfile**. This project demonstrates how to
-load common audio formats and play them back through the system’s
-default ALSA device with basic metadata display.
+# CLI Audio Player
+This is a minimal command-line audio player written in C++.
+This project demonstrates how to load common audio formats and
+play them back using the operating system's native audio APIs.
+The Linux version uses ALSA and the macOS version uses AudioToolbox,
+which is a framework within the Core Audio API.
 
 ## Features
-- Plays audio files via ALSA
-- Supports multiple formats through **libsndfile** (WAV, FLAC, OGG, AIFF, etc.)
+- Cross-platform command-line audio playback
+  - Linux: ALSA
+  - macOS: AudioToolbox (Core Audio)
+- Supports multiple formats through **libsndfile**
+  - WAV, FLAC, OGG, AIFF, etc.
 - Automatic configuration of:
   - Sample rate
   - Channel count
@@ -16,10 +20,11 @@ default ALSA device with basic metadata display.
   - Track number
   - Artist
   - Album
-- Simple, readable C++ design suitable for learning ALSA basics
+- Simple, readable C++ design suitable for learning
+  low-level audio APIs
 
 ## Building (Linux)
-To build on Linux, You will need the following
+To build on Linux, you will need the following
 libraries/tools installed:
 - **CMake**
 - **ALSA**
